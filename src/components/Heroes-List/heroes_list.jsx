@@ -22,7 +22,7 @@ export default class HeroList extends React.Component {
 
         let heroes = this.props.heroes.map((hero, i) => {
             return (
-                <div className="col-md-2" key={i}>
+                <div className="col-md-3" key={i}>
                     <div className="card">
 
                         <div className="card-body ">
@@ -32,7 +32,7 @@ export default class HeroList extends React.Component {
                             <h2>{hero.name}</h2>
                             <h3>{hero.size}</h3>
 
-
+                            <button className="btn">подробнее</button>
                         </div>
                     </div>
                 </div>
