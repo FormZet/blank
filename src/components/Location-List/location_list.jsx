@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Modal from "../Modal/modal";
 
 export default class LocationList extends React.Component {
     render() {

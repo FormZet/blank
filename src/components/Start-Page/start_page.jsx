@@ -1,7 +1,5 @@
 import React from "react";
-import scss from "../../assets/styles/main.scss";
 import {Link} from "react-router-dom";
-import Modal from '../Modal/modal.jsx';
 
 
 export default class StartPage extends React.Component {

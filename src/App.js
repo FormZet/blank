@@ -8,7 +8,6 @@ import CreateHero from "./components/Create-Hero/create_hero.jsx";
 import ChooseCreation from "./components/Choose-Creation/choose_creation.jsx";
 import CreateLocation from "./components/Create-Location/create_location.jsx";
 import CreateUniverse from "./components/Create-Universe/create_universe.jsx";
-import Modal from "./components/Modal/modal.jsx";
 import MyBlank from "./components/My-Blank/my_blank";
 
 
@@ -148,8 +147,6 @@ export default class App extends React.Component {
                             <Route exact path="/" component={StartPage}/>
 
                             <Route exact path="/chooseCreation" component={ChooseCreation}/>
-
-                            <Route exact path="/modal" component={Modal}/>
 
                             <Route path="/createHero"
                                    render={props => <CreateHero {...props} addNewHero={this.addNewHero}/>}/>

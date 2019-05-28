@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Modal from "../Modal/modal";
+import Modal from "../Modal/Modal";
 
 export default class HeroList extends React.Component {
     constructor() {
@@ -9,12 +9,19 @@ export default class HeroList extends React.Component {
         };
     }
 
-
-
+    handleClick = () => {
+        this.setState({isModalOpen: !this.state.isModalOpen})
+    }
 
     render() {
+        let modalBody = <Modal unmount={this.handleClick}
+                               containerClass="-w650">
+            <h1>This is a Modal</h1>
+            <p>Just add your content here, Lev</p>
+        </Modal>;
+
         let heroes = this.props.heroes.map((hero, i) => {
-            return(
+            return (
                 <div className="col-md-2" key={i}>
                     <div className="card">
 
@@ -31,12 +38,8 @@ export default class HeroList extends React.Component {
                 </div>
             )
         });
-     function  handleClick()
-        {
-            this.setState({ isModalOpen: !this.state.isModalOpen})
-        }
 
-        return(
+        return (
             <>
                 <div className="container">
                     <h1 className="ListName">Heroes List</h1>
@@ -44,7 +47,8 @@ export default class HeroList extends React.Component {
                         {heroes}
 
                     </div>
-                    <Modal isOpen={true} onClick = {handleClick()}></Modal>
+                    <button onClick={this.handleClick}>Open modal</button>
+                    {this.state.isModalOpen ? modalBody : ''}
                 </div>
             </>
         );
