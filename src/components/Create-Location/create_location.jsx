@@ -1,6 +1,4 @@
 import React from "react";
-import scss from "../../styles/main.scss";
-import Dropzone from "../Dropzone/dropzone.jsx";
 
 
 export default class CreateLocation extends React.Component {
@@ -119,12 +117,6 @@ export default class CreateLocation extends React.Component {
 
                             </form>
 
-
-                            <>
-                                <div className="location_img">
-                                    <Dropzone/>
-                                </div>
-                            </>
                         </div>
                     </div>
                 </>

@@ -1,8 +1,8 @@
 import React from "react";
 import './SidebarNav.scss';
 import {Link} from "react-router-dom";
-import imageplus from '../../../assets/img/plus.png';
-import imagedown from '../../../assets/img/sidebar_down.png';
+import imageplus from '../../assets/img/plus.png';
+import imagedown from '../../assets/img/sidebar_down.png';
 
 
 export default class SidebarNav extends React.Component {

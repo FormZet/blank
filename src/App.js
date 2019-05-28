@@ -1,15 +1,15 @@
 import React from 'react';
 import {Route} from "react-router-dom";
-import Sidebar from "./assets/components/SideBar/sidebar.jsx";
-import StartPage from "./assets/components/Start-Page/start_page.jsx";
-import HeroList from "./assets/components/Heroes-List/heroes_list.jsx";
-import LocationList from "./assets/components/Location-List/location_list.jsx";
-import CreateHero from "./assets/components/Create-Hero/create_hero.jsx";
-import ChooseCreation from "./assets/components/Choose-Creation/choose_creation.jsx";
-import CreateLocation from "./assets/components/Create-Location/create_location.jsx";
-import CreateUniverse from "./assets/components/Create-Universe/create_universe.jsx";
-import Modal from "./assets/components/Modal/modal.jsx";
-import MyBlank from "./assets/components/My-Blank/my_blank";
+import Sidebar from "./components/SideBar/sidebar.jsx";
+import StartPage from "./components/Start-Page/start_page.jsx";
+import HeroList from "./components/Heroes-List/heroes_list.jsx";
+import LocationList from "./components/Location-List/location_list.jsx";
+import CreateHero from "./components/Create-Hero/create_hero.jsx";
+import ChooseCreation from "./components/Choose-Creation/choose_creation.jsx";
+import CreateLocation from "./components/Create-Location/create_location.jsx";
+import CreateUniverse from "./components/Create-Universe/create_universe.jsx";
+import Modal from "./components/Modal/modal.jsx";
+import MyBlank from "./components/My-Blank/my_blank";
 
 
 export default class App extends React.Component {

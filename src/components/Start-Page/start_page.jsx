@@ -1,5 +1,5 @@
 import React from "react";
-import scss from "../../styles/main.scss";
+import scss from "../../assets/styles/main.scss";
 import {Link} from "react-router-dom";
 import Modal from '../Modal/modal.jsx';
 

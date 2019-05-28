@@ -1,8 +1,8 @@
 import React from "react";
-import image from '../../../assets/img/blank-icon.png';
+import image from '../../assets/img/blank-icon.png';
 import {Link} from "react-router-dom";
 import SidebarNav from '../SidebarNav/SidebarNav.jsx'
-import imageplusv1 from "../../img/plusv1.png";
+import imageplusv1 from "../../assets/img/plusv1.png";
 
 
 
