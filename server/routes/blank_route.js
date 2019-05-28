@@ -1,13 +1,47 @@
 module.exports = (app) => {
-    const place_controller = require("../controllers/place_controller");
+    const place_controller = require("../controllers/blank_controller");
 
     const multer = require("multer");
     const upload = multer({
         dest: "./uploads"
     });
 
-    app.post('/api/hero', upload.single('image'), async (req, res, next) => {
-        console.log(req.file)
+    app.post('/api/hero', async (req, res, next) => {
+        let response = await place_controller.createPlace(
+            req.body.name,
+            req.body.pic,
+            req.body.role,
+            req.body.desc,
+            req.body.universeId
+        );
+
+        if (!response.isError) {
+            res.json({
+                hero: response
+            });
+        } else {
+            res.status(500);
+            res.json(response);
+        }
+    });
+
+    app.post('/api/location', async (req, res, next) => {
+        let response = await place_controller.createPlace(
+            req.body.name,
+            req.body.pic,
+            req.body.role,
+            req.body.desc,
+            req.body.universeId
+        );
+
+        if (!response.isError) {
+            res.json({
+                hero: response
+            });
+        } else {
+            res.status(500);
+            res.json(response);
+        }
     });
 
     app.post("/api/place", upload.single("image"), async (req, res, next) => {

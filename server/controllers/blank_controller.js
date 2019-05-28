@@ -1,5 +1,50 @@
 const place_dao = require('../daos/PlaceDao');
 
+const createHero = async (name, universeId, role, pic, desc) => {
+    const hero = await place_dao.createHero(name, universeId, role, pic, desc);
+
+    console.log('this is supposed to be a model', hero);
+
+    if (!hero) {
+        return {
+            isError: true,
+            error: 'UNKNOWN_EXEPTION'
+        }
+    } else {
+        return hero
+    }
+};
+
+const createUniverse = async (name, universeId, role, pic, desc) => {
+    const hero = await place_dao.createHero(name, universeId, role, pic, desc);
+
+    console.log('this is supposed to be a model', hero);
+
+    if (!hero) {
+        return {
+            isError: true,
+            error: 'UNKNOWN_EXEPTION'
+        }
+    } else {
+        return hero
+    }
+};
+
+const createLocation = async (name, universeId, role, pic, desc) => {
+    const hero = await place_dao.createHero(name, universeId, role, pic, desc);
+
+    console.log('this is supposed to be a model', hero);
+
+    if (!hero) {
+        return {
+            isError: true,
+            error: 'UNKNOWN_EXEPTION'
+        }
+    } else {
+        return hero
+    }
+};
+
 const getAllPlaces = async () => {
     const places = await place_dao.getAllPlaces();
     if (!places) {
@@ -23,7 +68,7 @@ const getPlaceByName = async (projectName) => {
         }
     } else {
         return {
-            place: project
+            place: place
         }
     }
 };
@@ -51,7 +96,7 @@ const updatePlace = async (oldName, newName, newDesc) => {
         }
     }
 
-    const result = await place_dao.updatePlace(project, newName, newDesc);
+    const result = await place_dao.updatePlace(place, newName, newDesc);
     return place;
 };
 
@@ -66,7 +111,9 @@ const deletePlace = async (name) => {
 
 module.exports = {
     getPlaceByName,
-    createPlace,
+    createHero,
+    createUniverse,
+    createLocation,
     getAllPlaces,
     updatePlace,
     deletePlace
