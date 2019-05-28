@@ -1,7 +1,4 @@
 import React from "react";
-import scss from "../../assets/styles/main.scss";
-
-
 
 export default class CreateUniverse extends React.Component {
 
@@ -14,9 +11,6 @@ export default class CreateUniverse extends React.Component {
         this.props.addNewUniverse(newUniverse);
         this.props.history.push('/myBlank');
     }
-
-
-
 
     render() {
         return (

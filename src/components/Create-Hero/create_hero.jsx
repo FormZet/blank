@@ -1,6 +1,4 @@
 import React, {useCallback} from 'react'
-import HeroCard from '../Hero-Card/hero_card.jsx';
-
 
 export default class CreateHero extends React.Component {
     constructor() {
@@ -18,7 +16,8 @@ export default class CreateHero extends React.Component {
         } else {
             this.setState({heroName: e.target.value});
         }
-    }
+    };
+
     onChange = event => {
         this.setState({
             heroSize: event.target.value
@@ -97,7 +96,6 @@ export default class CreateHero extends React.Component {
             </div>
         )
     }
-
 }
 
 function getSize(param) {
