@@ -1,0 +1,220 @@
+//@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import './lib/argon';
+
+@font-face{
+  font-family: "P_Font";
+  src: url("../fonts/Inconsolata/Inconsolata-Bold.ttf")
+}
+@font-face{
+  font-family: "Sidebar_Extra";
+  src: url("../fonts/Indie_Flower/IndieFlower.ttf")
+}
+@font-face{
+  font-family: "Sidebar";
+  src: url("../fonts/BalooBhai-Regular.ttf")
+}
+@font-face{
+  font-family: "Headers";
+  src: url("../fonts/Kanit/Kanit-Medium.ttf")
+}
+
+body{
+  height: 100vh;
+  overflow: hidden;
+  font-family:"P_Font";
+}
+.container{
+  margin: 0 auto;
+  width: 1024px;
+
+}
+.bubble {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.startbubble{
+  border: 2px solid grey;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+}
+h1{
+  font-family: "Headers";
+  font-size:40px;
+}
+h2{
+  font-size: 20px;
+}
+.c_un_mar{
+  margin-bottom: 20px;
+}
+.createhero_flex{
+  font-size: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 30px;
+  margin-top:50px;
+}
+.form-check-label{
+  font-size: 20px;
+}
+label{
+  font-size: 19px;
+}
+.hero_img{
+  height: 450px;
+  width: 300px;
+  background-color: #fcf8e3;
+}
+.title{
+  text-align: center;
+}
+.doneBtn{
+  text-align: center;
+  padding-top: 8px;
+  font-size: 25px;
+  width: 120px;
+  border-radius: 10px;
+  height: 50px;
+  background-color: teal;
+}
+.doneButton{
+  margin-top: 30px;
+  height: 30px;
+
+}
+.heroForm{
+  margin-right: 100px;
+}
+.objectName{
+  text-align: center;
+  width: 50vw;
+  margin: 0 auto;
+  margin-top:30px;
+  margin-bottom: -50px;
+  height: 70px;
+  background-color: aliceblue;
+}
+.createLocation_flex{
+  font-size: 35px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 30px;
+}
+.location_img{
+  height:520px;
+  margin-top: -40px;
+  width: 1200px;
+  background-color:whitesmoke;
+  margin-left:30px;
+}
+.loc_input{
+  width: 70%;
+}
+.locationForm{
+  margin-top:-75px;
+}
+.locationForm div,label{
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+.card-body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+.card{
+  margin:5px;
+  height: 300px;
+  display: flex;
+
+}
+.card img{
+  width: 50%;
+}
+.container{
+  margin: 0 auto;
+  width: 1024px;
+}
+.universeForm div{
+  margin-bottom: 30px;
+}
+.ListName{
+  text-align: center;
+  font-size: 30px;
+}
+.creationsFlex{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+}
+.creationsFlex div{
+  width: 400px;
+  height: 600px;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.creationsFlex div a{
+width: 100%;
+}
+.global-container{
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar{
+  height: 100vh;
+  background-color: #24b47e;
+  width: 250px;
+}
+.global-container__right{
+  width: calc(100% - 250px) ;
+}
+.sidebar{
+  &__name {
+    padding: 20px;
+    color: white;
+    font-weight: 900;
+  }
+
+  li{
+    padding: 10px 20px;
+
+    a {
+      color: white;
+    }
+
+    &:hover {
+      background-color: #565656;
+    }
+  }
+}
+
+.logo{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  margin-bottom: 8px;
+}
+.name{
+  display: flex;
+}
+.sidebar{
+  font-size:18px;
+  font-family: "Sidebar";
+}
+.kekedd{
+  width: 200px;
+  height: 200px;
+  background-color: antiquewhite;
+}

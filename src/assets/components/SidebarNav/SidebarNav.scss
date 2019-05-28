@@ -1,0 +1,71 @@
+.SidebarNav {
+  cursor: pointer;
+  $this: &;
+  position: relative;
+
+  &__header {
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    &.-active {
+      background-color: rgba(255, 255, 255, 0.4);
+      color: #565656;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__container {
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__item {
+    padding: 10px 10px 10px 30px;
+    background-color: black;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #565656;
+    }
+
+    a {
+      color: white;
+    }
+  }
+
+  &.-is-open {
+
+    #{$this}__container {
+      height: auto;
+    }
+  }
+}
+.sidebar_plus{
+  width: 10%;
+  float: right;
+  margin-top: 2.5px;
+}
+
+.imagestart{
+  margin-left:30px;
+  width:10%;
+
+}
+.imagedown{
+ transform:rotate(90deg);
+}
+.sidebar_plusv1{
+  width: 13%;
+  margin-left:110px;
+  margin-top: 30px;
+}
