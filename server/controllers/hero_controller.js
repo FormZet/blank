@@ -1,7 +1,7 @@
-const place_dao = require('../daos/HeroDao');
+const hero_dao = require('../daos/HeroDao');
 
 const createHero = async (name, universeId, role, pic, desc) => {
-    const hero = await place_dao.createHero(name, universeId, role, pic, desc);
+    const hero = await hero_dao.createHero(name, universeId, role, pic, desc);
 
     console.log('this is supposed to be a model', hero);
 
@@ -15,93 +15,63 @@ const createHero = async (name, universeId, role, pic, desc) => {
     }
 };
 
-const createUniverse = async (name, universeId, role, pic, desc) => {
-    const hero = await place_dao.createHero(name, universeId, role, pic, desc);
-
-    console.log('this is supposed to be a model', hero);
-
-    if (!hero) {
-        return {
-            isError: true,
-            error: 'UNKNOWN_EXEPTION'
-        }
-    } else {
-        return hero
-    }
-};
-
-const createLocation = async (name, universeId, role, pic, desc) => {
-    const hero = await place_dao.createHero(name, universeId, role, pic, desc);
-
-    console.log('this is supposed to be a model', hero);
-
-    if (!hero) {
-        return {
-            isError: true,
-            error: 'UNKNOWN_EXEPTION'
-        }
-    } else {
-        return hero
-    }
-};
-
-const getAllPlaces = async () => {
-    const places = await place_dao.getAllPlaces();
-    if (!places) {
+const getAllHeros = async () => {
+    const heroes = await hero_dao.getAllHeros();
+    if (!heroes) {
         return {
             isError: true,
             error: 'CANT_FIND'
         }
     } else {
         return {
-            places: places
+            heroes: heroes
         }
     }
 };
 
-const getPlaceByName = async (projectName) => {
-    const place = await place_dao.getPlaceByName(projectName);
-    if (!place) {
+const getHeroByName = async (projectName) => {
+    const hero = await hero_dao.getHeroByName(projectName);
+    if (!hero) {
         return {
             isError: true,
             error: 'CANT_FIND'
         }
     } else {
         return {
-            place: place
+            hero: hero
         }
     }
 };
 
-const createPlace = async (name, address, lat, lng, pic, architector, style, desc) => {
-    const place = await place_dao.createPlace(name, address, lat, lng, pic, architector, style, desc);
+const createHero = async (name, address, lat, lng, pic, architector, style, desc) => {
+    const hero = await hero_dao.createHero(name, address, lat, lng, pic, architector, style, desc);
 
-    console.log('this is supposed to be a model', place);
+    console.log('this is supposed to be a model', hero);
 
-    if (!place) {
+    if (!hero) {
         return {
             isError: true,
             error: 'UNKNOWN_EXEPTION'
         }
     } else {
-        return place
+        return hero
     }
 };
 
-const updatePlace = async (oldName, newName, newDesc) => {
-    const place = await place_dao.getPlaceByName(oldName);
-    if (!place){
+const updateHero = async (oldName, newName, newDesc) => {
+    const hero = await hero_dao.getHeroByName(oldName);
+    if (!hero){
         return {
-            error: 'No Place Like This in a DataBase'
+            error: 'No Hero Like This in a DataBase'
         }
     }
 
-    const result = await place_dao.updatePlace(place, newName, newDesc);
-    return place;
+    const result = await hero_dao.updateHero(hero, newName, newDesc);
+    return hero;
 };
 
-const deletePlace = async (name) => {
-    const response = await place_dao.deletePlace(name);
+const deleteHero = async (name) => {
+    const response = await hero_dao.deleteHero(name);
     console.log('AFTER DELETE', response);
 
     if (!response) {
@@ -110,11 +80,9 @@ const deletePlace = async (name) => {
 };
 
 module.exports = {
-    getPlaceByName,
+    getHeroByName,
     createHero,
-    createUniverse,
-    createLocation,
-    getAllPlaces,
-    updatePlace,
-    deletePlace
+    getAllHeros,
+    updateHero,
+    deleteHero
 };

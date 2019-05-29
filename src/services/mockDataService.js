@@ -75,7 +75,7 @@ const mockData = [
 const mockDataService = {
   createMockData: () => {
     mockData.forEach(place => {
-      let woop = apiRequestService.createPlace(place);
+      let woop = apiRequestService.createHero(place);
     });
   }
 };

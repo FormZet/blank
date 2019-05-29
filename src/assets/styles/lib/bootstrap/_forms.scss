@@ -37,7 +37,7 @@
   // Customize the `:focus` state to imitate native WebKit styles.
   @include form-control-focus();
 
-  // Placeholder
+  // Heroholder
   &::placeholder {
     color: $input-placeholder-color;
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.

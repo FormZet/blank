@@ -1,43 +1,40 @@
 const mongoose = require("mongoose");
 const HeroModel = mongoose.model("HeroModel");
 
-const createPlace = async (name, address, lat, lng, pic, architector, style, desc) => {
-    const place = new HeroModel({
+const createHero = async (name, universeId, role, pic, desc) => {
+    const hero = new HeroModel({
         name: name,
-        address: address,
-        lat: lat,
-        lng: lng,
-        style: style,
-        architector: architector,
+        role: role,
+        universeId: universeId,
         pic: pic,
         desc: desc
     });
-    return await place.save();
+    return await hero.save();
 };
 
-const getPlaceByName = async (name) => {
+const getHeroByName = async (name) => {
     return await HeroModel.findOne({name: name});
 };
 
-const getAllPlaces = async () => {
+const getAllHeros = async () => {
     return await HeroModel.find();
 };
 
-const deletePlace = async (place) => {
-    return await place.remove();
+const deleteHero = async (hero) => {
+    return await hero.remove();
 };
 
-const updatePlace = async (place, newName, newDesc) => {
-    place.name = newName;
-    place.desc = newDesc;
+const updateHero = async (hero, newName, newDesc) => {
+    hero.name = newName;
+    hero.desc = newDesc;
 
-    return await place.save();
+    return await hero.save();
 };
 
 module.exports = {
-    createPlace,
-    getPlaceByName,
-    getAllPlaces,
-    updatePlace,
-    deletePlace
+    createHero,
+    getHeroByName,
+    getAllHeros,
+    updateHero,
+    deleteHero
 };

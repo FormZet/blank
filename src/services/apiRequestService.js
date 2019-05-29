@@ -1,16 +1,16 @@
 import axios from 'axios/index';
 
 const apiRequestService = {
-  createPlace: (newPlace) => {
+  createHero: (newHero) => {
     return axios.post('http://localhost:3005/api/place', {
-      name: newPlace.name,
-      address: newPlace.address,
-      lat: newPlace.lat,
-      lng: newPlace.lng,
-      style: newPlace.style,
-      architector: newPlace.architector,
-      pic: newPlace.pic,
-      desc: newPlace.desc
+      name: newHero.name,
+      address: newHero.address,
+      lat: newHero.lat,
+      lng: newHero.lng,
+      style: newHero.style,
+      architector: newHero.architector,
+      pic: newHero.pic,
+      desc: newHero.desc
     })
   },
 
@@ -24,11 +24,11 @@ const apiRequestService = {
   },
 
 
-  getPlaces: () => {
+  getHeros: () => {
     return axios.get('http://localhost:3005/api/place/all');
   },
 
-  getPlaceByName: (name) => {
+  getHeroByName: (name) => {
     return axios.get('http://localhost:3005/api/place', {
       params: {
         name: name
@@ -36,7 +36,7 @@ const apiRequestService = {
     });
   },
 
-  updatePlaceData: (newData) => {
+  updateHeroData: (newData) => {
     return axios.put('http://localhost:3005/api/place', {
       oldName: newData.oldName,
       newName: newData.newName,
@@ -44,7 +44,7 @@ const apiRequestService = {
     });
   },
 
-  deletePlace: (name) => {
+  deleteHero: (name) => {
     return axios.delete('http://localhost:3005/api/place', {
       params: {
         name: name

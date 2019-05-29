@@ -6,27 +6,8 @@ module.exports = (app) => {
         dest: "./uploads"
     });
 
-    app.post('/api/hero', async (req, res, next) => {
-        let response = await location_controller.createPlace(
-            req.body.name,
-            req.body.pic,
-            req.body.role,
-            req.body.desc,
-            req.body.universeId
-        );
-
-        if (!response.isError) {
-            res.json({
-                hero: response
-            });
-        } else {
-            res.status(500);
-            res.json(response);
-        }
-    });
-
     app.post('/api/location', async (req, res, next) => {
-        let response = await location_controller.createPlace(
+        let response = await location_controller.createHero(
             req.body.name,
             req.body.pic,
             req.body.role,
@@ -47,7 +28,7 @@ module.exports = (app) => {
     app.post("/api/place", upload.single("image"), async (req, res, next) => {
         console.log(req.file);
 
-        let response = await location_controller.createPlace(
+        let response = await location_controller.createHero(
             req.body.name,
             req.body.address,
             req.body.lat,
@@ -72,7 +53,7 @@ module.exports = (app) => {
 
     app.route("/api/place")
         .get(async (req, res, next) => {
-            let response = await location_controller.getPlaceByName(req.query.name);
+            let response = await location_controller.getHeroByName(req.query.name);
 
             if (!response.isError) {
                 res.json({
@@ -86,7 +67,7 @@ module.exports = (app) => {
 
     app.route("/api/place")
         .put(async (req, res, next) => {
-            let response = await location_controller.updatePlace(req.body.oldName, req.body.newName, req.body.newDesc);
+            let response = await location_controller.updateHero(req.body.oldName, req.body.newName, req.body.newDesc);
 
             console.log("Back to Route", response);
             if (!response.isError) {
@@ -101,7 +82,7 @@ module.exports = (app) => {
 
     app.route("/api/place")
         .delete(async (req, res, next) => {
-            let response = await location_controller.deletePlace(req.query.name);
+            let response = await location_controller.deleteHero(req.query.name);
 
             if (!response.isError) {
                 res.json({
@@ -115,7 +96,7 @@ module.exports = (app) => {
 
     app.route("/api/place/all")
         .get(async (req, res, next) => {
-            let response = await location_controller.getAllPlaces();
+            let response = await location_controller.getAllHeros();
             if (!response.isError) {
                 res.json({
                     places: response.places
