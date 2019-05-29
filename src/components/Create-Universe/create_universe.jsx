@@ -4,8 +4,8 @@ export default class CreateUniverse extends React.Component {
     constructor() {
         super();
         this.state = {
-            UniverseName: 'Universe Name',
-            UniverseSize: 'medium'
+            universeName: 'Universe Name',
+            universeSize: 'medium'
         };
     }
 
@@ -20,7 +20,7 @@ export default class CreateUniverse extends React.Component {
 
     onChange = event => {
         this.setState({
-            UniverseSize: event.target.value
+            universeSize: event.target.value
         });
     };
 
@@ -30,7 +30,7 @@ export default class CreateUniverse extends React.Component {
         let newUniverse = {
             name: this.inputName.value,
             desc: this.inputDesc.value,
-            size: getSize(this.state.UniverseSize)
+            size: getSize(this.state.universeSize)
         };
         this.props.addNewUniverse(newUniverse);
         this.props.history.push('/myBlank');
@@ -42,7 +42,7 @@ export default class CreateUniverse extends React.Component {
                 <div className="container">
                     <div className="fixWidth">
 
-                        <h1 className="title">{this.state.UniverseName}</h1>
+                        <h1 className="title">{this.state.universeName}</h1>
 
                         <form className="universeForm   " onSubmit={(e) => {
                             this.createUniverse(e);
