@@ -1,4 +1,4 @@
-const place_dao = require('../daos/PlaceDao');
+const place_dao = require('../daos/HeroDao');
 
 const createHero = async (name, universeId, role, pic, desc) => {
     const hero = await place_dao.createHero(name, universeId, role, pic, desc);

@@ -23,7 +23,7 @@ mongoose.connect(MONGODB, {
 require('./models/UniverseModel');
 require('./models/HeroModel');
 require('./models/LocationModel');
-require('./routes/blank_route')(app);
+require('./routes/hero_route')(app);
 
 const PORT = process.env.PORT || 3005;
 app.listen(PORT, '0.0.0.0', () => {

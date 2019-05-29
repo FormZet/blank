@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-const PlaceModel = mongoose.model("PlaceModel");
+const HeroModel = mongoose.model("HeroModel");
 
 const createPlace = async (name, address, lat, lng, pic, architector, style, desc) => {
-    const place = new PlaceModel({
+    const place = new HeroModel({
         name: name,
         address: address,
         lat: lat,
@@ -16,11 +16,11 @@ const createPlace = async (name, address, lat, lng, pic, architector, style, des
 };
 
 const getPlaceByName = async (name) => {
-    return await PlaceModel.findOne({name: name});
+    return await HeroModel.findOne({name: name});
 };
 
 const getAllPlaces = async () => {
-    return await PlaceModel.find();
+    return await HeroModel.find();
 };
 
 const deletePlace = async (place) => {

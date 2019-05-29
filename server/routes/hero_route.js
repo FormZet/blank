@@ -1,5 +1,5 @@
 module.exports = (app) => {
-    const place_controller = require("../controllers/blank_controller");
+    const hero_controller = require("../controllers/hero_controller");
 
     const multer = require("multer");
     const upload = multer({
@@ -7,7 +7,7 @@ module.exports = (app) => {
     });
 
     app.post('/api/hero', async (req, res, next) => {
-        let response = await place_controller.createPlace(
+        let response = await hero_controller.createPlace(
             req.body.name,
             req.body.pic,
             req.body.role,
@@ -26,7 +26,7 @@ module.exports = (app) => {
     });
 
     app.post('/api/location', async (req, res, next) => {
-        let response = await place_controller.createPlace(
+        let response = await hero_controller.createPlace(
             req.body.name,
             req.body.pic,
             req.body.role,
@@ -47,7 +47,7 @@ module.exports = (app) => {
     app.post("/api/place", upload.single("image"), async (req, res, next) => {
         console.log(req.file);
 
-        let response = await place_controller.createPlace(
+        let response = await hero_controller.createPlace(
             req.body.name,
             req.body.address,
             req.body.lat,
@@ -72,7 +72,7 @@ module.exports = (app) => {
 
     app.route("/api/place")
         .get(async (req, res, next) => {
-            let response = await place_controller.getPlaceByName(req.query.name);
+            let response = await hero_controller.getPlaceByName(req.query.name);
 
             if (!response.isError) {
                 res.json({
@@ -86,7 +86,7 @@ module.exports = (app) => {
 
     app.route("/api/place")
         .put(async (req, res, next) => {
-            let response = await place_controller.updatePlace(req.body.oldName, req.body.newName, req.body.newDesc);
+            let response = await hero_controller.updatePlace(req.body.oldName, req.body.newName, req.body.newDesc);
 
             console.log("Back to Route", response);
             if (!response.isError) {
@@ -101,7 +101,7 @@ module.exports = (app) => {
 
     app.route("/api/place")
         .delete(async (req, res, next) => {
-            let response = await place_controller.deletePlace(req.query.name);
+            let response = await hero_controller.deletePlace(req.query.name);
 
             if (!response.isError) {
                 res.json({
@@ -115,7 +115,7 @@ module.exports = (app) => {
 
     app.route("/api/place/all")
         .get(async (req, res, next) => {
-            let response = await place_controller.getAllPlaces();
+            let response = await hero_controller.getAllPlaces();
             if (!response.isError) {
                 res.json({
                     places: response.places
