@@ -53,7 +53,9 @@ export default class Modal extends React.PureComponent {
         this.props.unmount();
     };
 
-    onEscPress = () => {
-        this.props.unmount();
+    onEscPress = (e) => {
+        if (e.keyCode === 27) {
+            this.props.unmount();
+        }
     }
 }

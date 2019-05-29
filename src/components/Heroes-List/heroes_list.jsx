@@ -1,51 +1,44 @@
 import React, {Component} from 'react';
 import Modal from "../Modal/Modal";
 import image from '../../assets/img/blank-icon.png';
+import HeroListModal from "./heroListModal";
 
 export default class HeroList extends React.Component {
     constructor() {
         super();
         this.state = {
-            isModalOpen: false
+            isModalOpen: false,
+            currentHero: {}
         };
     }
 
-    handleClick = () => {
+    handleClick = (hero) => {
+        this.setState({currentHero: hero});
+        this.setState({isModalOpen: !this.state.isModalOpen});
+    };
+
+    handleUnmount = (e) => {
         this.setState({isModalOpen: !this.state.isModalOpen})
-    }
+    };
 
     render() {
-        let modalBody = <Modal unmount={this.handleClick}
+        let modalBody = <Modal unmount={this.handleUnmount}
                                containerClass="-w650">
             <div className="heroModal">
-            <div className="heroModalDesc">
-            <h1>hero name</h1>
-            <h2>hero role</h2>
-             <p>hero desc</p>
-            </div>
-            <img className="heroModalImg"src={image}>
+                <div className="heroModalDesc">
+                    <h1>{this.state.currentHero.name}</h1>
+                    <h2>{this.state.currentHero.role}</h2>
+                    <p>{this.state.currentHero.desc}</p>
+                </div>
+                <img className="heroModalImg" src={this.state.currentHero.image}>
 
-            </img>
+                </img>
             </div>
         </Modal>;
 
         let heroes = this.props.heroes.map((hero, i) => {
             return (
-                <div className="col-md-3" key={i}>
-                    <div className="card">
-
-                        <div className="card-body ">
-
-                            <img src={hero.img}/>
-
-                            <h2>{hero.name}</h2>
-                            <h3>{hero.size}</h3>
-
-                                <button onClick={this.handleClick}>Open modal</button>
-                                {this.state.isModalOpen ? modalBody : ''}
-                        </div>
-                    </div>
-                </div>
+                <HeroListModal hero={hero} onButtonClick={this.handleClick}/>
             )
         });
 
@@ -57,7 +50,7 @@ export default class HeroList extends React.Component {
                         {heroes}
 
                     </div>
-
+                    {this.state.isModalOpen ? modalBody : ''}
                 </div>
             </>
         );
