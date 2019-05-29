@@ -57,8 +57,7 @@ export default class CreateHero extends React.Component {
                         <div className="form-check form-check-inline c_un_mar">
                             <input className="form-check-input" type="radio" name="inlineRadioOptions"
                                    id="inlineRadio1"
-                                   onChange={this.onChange}
-                                   checked={this.state.heroSize === 'first'}
+
                                    value="FIRST"
                                    ref={(el) => {
                                        this.inputRadio = el;
@@ -69,8 +68,7 @@ export default class CreateHero extends React.Component {
                         <div className="form-check form-check-inline">
                             <input className="form-check-input" type="radio" name="inlineRadioOptions"
                                    id="inlineRadio2"
-                                   onChange={this.onChange}
-                                   checked={this.state.heroSize === 'secondary'}
+
                                    value="SECONDARY"/>
                             <label className="form-check-label" htmlFor="inlineRadio2">Secondary</label>
                         </div>
@@ -89,9 +87,6 @@ export default class CreateHero extends React.Component {
                         <button type="submit" className="btn btn-primary doneBtn">Submit</button>
                     </form>
 
-                    <div className="hero_img">
-
-                    </div>
                 </div>
             </div>
         )
@@ -101,9 +96,9 @@ export default class CreateHero extends React.Component {
 function getSize(param) {
     switch (param) {
         case 'first':
-            return '1';
+            return 'I';
         case 'secondary':
-            return '2';
+            return 'II';
 
     }
 }

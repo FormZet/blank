@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 
 export default class MyBlank extends React.Component {
+
+
     render() {
         let universes = this.props.universes.map((universe, q) => {
             return(
@@ -13,6 +15,8 @@ export default class MyBlank extends React.Component {
 
                             <h2><Link to={'/chooseCreation'}>{universe.name}</Link></h2>
                             <h3>{universe.desc}</h3>
+                            <h3>{universe.size}</h3>
+
 
                         </div>
                     </div>

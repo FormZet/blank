@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Modal from "../Modal/Modal";
+import image from '../../assets/img/blank-icon.png';
 
 export default class HeroList extends React.Component {
     constructor() {
@@ -16,8 +17,16 @@ export default class HeroList extends React.Component {
     render() {
         let modalBody = <Modal unmount={this.handleClick}
                                containerClass="-w650">
-            <h1>This is a Modal</h1>
-            <p>Just add your content here, Lev</p>
+            <div className="heroModal">
+            <div className="heroModalDesc">
+            <h1>hero name</h1>
+            <h2>hero role</h2>
+             <p>hero desc</p>
+            </div>
+            <img className="heroModalImg"src={image}>
+
+            </img>
+            </div>
         </Modal>;
 
         let heroes = this.props.heroes.map((hero, i) => {
@@ -32,7 +41,8 @@ export default class HeroList extends React.Component {
                             <h2>{hero.name}</h2>
                             <h3>{hero.size}</h3>
 
-                            <button className="btn">подробнее</button>
+                                <button onClick={this.handleClick}>Open modal</button>
+                                {this.state.isModalOpen ? modalBody : ''}
                         </div>
                     </div>
                 </div>
@@ -47,8 +57,7 @@ export default class HeroList extends React.Component {
                         {heroes}
 
                     </div>
-                    <button onClick={this.handleClick}>Open modal</button>
-                    {this.state.isModalOpen ? modalBody : ''}
+
                 </div>
             </>
         );

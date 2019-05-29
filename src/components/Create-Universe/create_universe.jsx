@@ -1,12 +1,36 @@
 import React from "react";
 
 export default class CreateUniverse extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            UniverseName: 'Universe Name',
+            UniverseSize: 'medium'
+        };
+    }
+
+    onUniverseNameChange = (e) => {
+        const newHName = e.target.value;
+        if (newHName === '') {
+            this.setState({universeName: 'Universe Name'});
+        } else {
+            this.setState({universeName: e.target.value});
+        }
+    };
+
+    onChange = event => {
+        this.setState({
+            UniverseSize: event.target.value
+        });
+    };
+
 
     createUniverse(e) {
         e.preventDefault();
         let newUniverse = {
             name: this.inputName.value,
-            desc: this.inputDesc.value
+            desc: this.inputDesc.value,
+            size: getSize(this.state.UniverseSize)
         };
         this.props.addNewUniverse(newUniverse);
         this.props.history.push('/myBlank');
@@ -18,14 +42,14 @@ export default class CreateUniverse extends React.Component {
                 <div className="container">
                     <div className="fixWidth">
 
-                        <h1 className="title">Create Universe</h1>
+                        <h1 className="title">{this.state.UniverseName}</h1>
 
                         <form className="universeForm   " onSubmit={(e) => {
                             this.createUniverse(e);
                         }}>
                             <div className="form-group c_un_mar">
                                 <label htmlFor="exampleFormControlInput1">Universe Name</label>
-                                <input type="text" className="form-control" id="exampleFormControlInput1"
+                                <input type="text" onChange={this.onUniverseNameChange}  className="form-control" id="exampleFormControlInput1"
                                        placeholder="how u will call it?"
                                        ref={(el) => {
                                            this.inputName = el;
@@ -39,7 +63,7 @@ export default class CreateUniverse extends React.Component {
                                            id="inlineRadio1"
                                            value="option1"/>
                                     <label className="form-check-label" htmlFor="inlineRadio1">small</label>
-                                </div>
+                                 </div>
                                 <div className="form-check form-check-inline">
                                     <input className="form-check-input" type="radio" name="inlineRadioOptions"
                                            id="inlineRadio2"
@@ -50,7 +74,7 @@ export default class CreateUniverse extends React.Component {
                                     <input className="form-check-input" type="radio" name="inlineRadioOptions"
                                            id="inlineRadio3"
                                            value="option3"/>
-                                    <label className="form-check-label" htmlFor="inlineRadio3">high</label>
+                                    <label className="form-check-label" htmlFor="inlineRadio3">large</label>
                                 </div>
                             </div>
                             <div className="form-group c_un_mar">
@@ -75,5 +99,16 @@ export default class CreateUniverse extends React.Component {
                 </div>
             </>
         )
+    }
+}
+function getSize(param) {
+    switch (param) {
+        case 'small':
+            return 'SMALL';
+        case 'medium':
+            return 'MEDIUM';
+        case 'large':
+            return 'LARGE';
+
     }
 }
