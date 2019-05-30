@@ -28,7 +28,7 @@ export default class HeroList extends React.Component {
                 <div className="heroModalDesc">
                     <h1>Name: <br></br>
                         <span>  {this.state.currentHero.name } </span> </h1>
-                    <h2>Role:<br></br>  {this.state.currentHero.role}</h2>
+                    <h2>Role: {this.state.currentHero.size}</h2>
                     <p>{this.state.currentHero.desc}</p>
                 </div>
                 <img className="heroModalImg" src={this.state.currentHero.img}>

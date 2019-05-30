@@ -27,8 +27,9 @@ export default class LocationList extends React.Component {
                                containerClass="-w650">
             <div className="locationModal">
                 <div className="heroModalDesc">
-                    <h1>{this.state.currentLoc.name}</h1>
-                    <h2>{this.state.currentLoc.role}</h2>
+                    <h1>Name : <br></br>
+                        <span>  {this.state.currentLoc.name}</span></h1>
+                    <h2>Scale:{this.state.currentLoc.size}</h2>
                     <p>{this.state.currentLoc.desc}</p>
                 </div>
                 <img className="locModalImg"src={this.state.currentLoc.img}>

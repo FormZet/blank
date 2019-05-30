@@ -29,7 +29,8 @@ export default class CreateLocation extends React.Component {
         let newLocation = {
             name: this.inputName.value,
             desc: this.inputDesc.value,
-            size: getSize(this.state.locationSize)
+            size: getSize(this.state.locationSize),
+            img: "https://www.dandwiki.com/w/images/thumb/1/18/3.5e_Optimized_Character_Build_Magic_Missile_Stormer.jpg/600px-3.5e_Optimized_Character_Build_Magic_Missile_Stormer.jpg"
         };
         this.props.addNewLocation(newLocation);
         this.props.history.push('/locationList');
@@ -61,7 +62,9 @@ export default class CreateLocation extends React.Component {
                             </div>
                             <label htmlFor="exampleFormControlInput1">Population</label><br></br>
                             <select className="form-control loc_input">
-                                <option>Default select</option>
+                                <option>Mini</option>
+                                <option>Medium</option>
+                                <option>Max</option>
                             </select>
                             <label htmlFor="exampleFormControlInput1">Size</label><br></br>
                             <div className="form-check form-check-inline c_un_mar">

@@ -1,3 +1,10 @@
+@font-face{
+  font-family: "Headers1";
+  src: url("../../assets/fonts/Kanit/Kanit-Regular.ttf")
+}
+
+
+
 .Modal {
   position: fixed;
   top: 0;
@@ -64,6 +71,7 @@
 }
 .heroModalImg{
   width: 30%;
+  border-radius: 10px;
 
 }
 .heroModalDesc{
@@ -76,10 +84,16 @@
   width: 450px;
   height: 300px;
   margin-left: 4px;
+  border-radius: 10px;
 }
 .heroModal{
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 400px;
+}
+.universeLink{
+  color: Purple;
+  text-transform: uppercase;
+  font-family:'Headers1' ;
 }

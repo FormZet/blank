@@ -13,9 +13,9 @@ export default class MyBlank extends React.Component {
                         <div className="card-body">
 
 
-                            <h2><Link to={'/chooseCreation'}>{universe.name}</Link></h2>
+                            <h2><Link className="universeLink" to={'/chooseCreation'}>{universe.name}</Link></h2>
 
-                            {/*<img src={this.state.universeList.avatar}/>*/}
+                            <img src={universe.avatar}/>
 
 
                         </div>

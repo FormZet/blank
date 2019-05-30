@@ -163,7 +163,7 @@ label{
   width: 400px;
   height: 600px;
   font-size: 40px;
-  margin-bottom: 40px;
+
 }
 .creationsFlex div a{
 width: 100%;
@@ -232,4 +232,21 @@ width: 100%;
 }
 .sidebar{
   z-index: 10000;
+}
+.chooseHero{
+  background-image: url("http://www.quartertothree.com/fp/wp-content/uploads/2011/06/Duel_04_01.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.chooseLoc{
+  background-image: url("https://www.dandwiki.com/w/images/thumb/1/18/3.5e_Optimized_Character_Build_Magic_Missile_Stormer.jpg/600px-3.5e_Optimized_Character_Build_Magic_Missile_Stormer.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.image-preview{
+  height: 550px;
+  width: 400px;
+  border: 1px dashed grey;
+  background-size: cover;
+  background-position: center;
 }

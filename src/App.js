@@ -30,7 +30,7 @@ export default class App extends React.Component {
                         {
                             name: "North",
                             desc: "Llega la hora de comprar un celular y varios son los detalles previos que debés tener cuenta para que tu compra termine siendo un " +
-                                "éxito. Prestá atención a las siguientes características de celulares libres que se detallan a continuaciónLlega la hora de comprar un celular y varios son los detalles previos que debés tener cuenta para que tu compra termine siendo un " +
+                                "éxits que se detallan a continuaciónLlega la hora de comprar un celular y varios son los detalles previos que debés tener cuenta para que tu compra termine siendo un " +
                                 "éxito. Prestá atención a las siguientes características de celulares libres que se detallan a continuación",
                             size: "lg",
                             img:
@@ -38,14 +38,17 @@ export default class App extends React.Component {
                         },
                         {
                             name: "West",
-                            desc: "SHAAA",
+                            desc: "Llega la hora de comprar un celular y varios son los detalles previos que debés tener cuenta para que tu compra termine siendo un " +
+                                "éxito. Prestár y varios son los detalles previos que debés tener cuenta para que tu compra termine siendo un " +
+                                "éxito. Prestá atenan a continuación",
                             size: "lg",
                             img:
                                 "https://vokrugsveta.ua/wp-content/uploads/2018/08/image7.jpg"
                         },
                         {
                             name: "East",
-                            desc: "CHIIII",
+                            desc: "Llega la hora de comprar un celular y varios son los detalles previos que debés tener cuenta para que tu compra termine siendo un " +
+                                "éxito. Prestá atención a las siguientes características de celulares ",
                             size: "md",
                             img:
                                 "http://1.bp.blogspot.com/-ch3QDbt9nYk/UkEcoEB8_TI/AAAAAAAABS4/pYAT6IdWXqI/s1600/dota2_tutorial_map_1_by_denolus-d6n7w9y.jpg"
@@ -53,7 +56,9 @@ export default class App extends React.Component {
 
                         {
                             name: "South",
-                            desc: "DAAAA",
+                            desc: "Llega la hora de comprar un celular y varios son los detalles previos que debés tener cuenta para que tu compra termine siendo un " +
+                                "éxito. Prestá atencnLlega la  tu compra termine siendo un " +
+                                "éxito. Prestá atención a las siguientes características de celulares libres que se detallan a continuación",
                             size: "sm",
                             img:
                                 "http://way2travel.ru/wp-content/uploads/2012/02/nestandart-3-1.jpg"
@@ -62,41 +67,47 @@ export default class App extends React.Component {
                     heroList: [
                         {
                             name: "Abaddon",
-                            desc: "TAAAA",
-                            role: "II",
+                            desc: "Llega la hora de comprar un celular y varios son los detalles previos que debés tener cuenta para que tu compra termine siendo un " +
+                                "éxito. Prestá atención a las siguientes características de celulares libres que se detallan a continuaciónLle",
+                            size: "II",
                             img:
                                 "https://i.pinimg.com/564x/7f/e7/16/7fe71679db253e3678ab4d2c217d1f57.jpg"
                         },
                         {
                             name: "Alchemist",
-                            desc: "SHAAA",
-                            role: "I",
+                            desc: "Llega la hora de comprar un celular y varios son los detalles previos que debés tener cuenta para que tu compra termine siendo un " +
+                                "éxito. Prestá atención a las siguientes características de celulares libres que se detallan a continuaciónLle",
+                            size: "I",
                             img:"https://i.pinimg.com/564x/a5/5c/cb/a55ccbbad48f3241bc881221faa7a0c6.jpg"
                         },
                         {
                             name: "Ancient Apparation",
-                            desc: "IssddsI",
-                            role: "I",
+                            desc: "Llega la hora de comprar un celular y varios son los detalles previos que debés tener cuenta para que tu compra termine siendo un " +
+                                "éxito. Prestá atención a las siguientes características de celulares libres que se detallan a continuaciónLle",
+                            size: "I",
                             img:
                                 "https://i.pinimg.com/564x/a5/6d/04/a56d04e01710425bde307622234d843b.jpg"
                         },
 
                         {
                             name: "Anti-Mage",
-                            desc: "DAAAA",
-                            role: "I",
+                            desc: "Llega la hora de comprar un celular y varios son los detalles previos que debés tener cuenta para que tu compra termine siendo un " +
+                                "éxito. Prestá atención a las siguientes características de celulares libres que se detallan a continuaciónLle",
+                            size: "I",
                             img:"https://i.pinimg.com/564x/3e/80/ac/3e80ac60a2570053fe3bdab2d8a35ff4.jpg"
                         },
                         {
                             name: "Arc Warden",
-                            desc: "DAAAA",
-                            role: "I",
+                            desc: "Llega la hora de comprar un celular y varios son los detalles previos que debés tener cuenta para que tu compra termine siendo un " +
+                                "éxito. Prestá atención a las siguientes características de celulares libres que se detallan a continuaciónLle",
+                            size: "I",
                             img:"https://i.pinimg.com/564x/17/74/5e/17745e8bd05eaaab7cd99ce33b721d34.jpg"
                         },
                         {
                             name: "Axe",
-                            desc: "CHIIII",
-                            role: "II",
+                            desc: "Llega la hora de comprar un celular y varios son los detalles previos que debés tener cuenta para que tu compra termine siendo un " +
+                                "éxito. Prestá atención a las siguientes características de celulares libres que se detallan a continuaciónLle",
+                            size: "II",
                             img:
                                 "https://i.pinimg.com/564x/94/e6/c1/94e6c1cc3203d07fe3b2b2de77d18a1c.jpg"
                         }
