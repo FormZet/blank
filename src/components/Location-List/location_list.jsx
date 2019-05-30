@@ -1,30 +1,37 @@
 import React, {Component} from 'react';
 import Modal from "../Modal/Modal";
 import image from "../../assets/img/blank-icon.png";
+import LocationListModal from "../Location-List/locationListModal";
 
 export default class LocationList extends React.Component {
     constructor() {
         super();
         this.state = {
-            isModalOpen: false
+            isModalOpen: false,
+            currentLoc: {}
         };
     }
 
-    handleClick = () => {
+    handleClick = (location) => {
+        this.setState({currentLoc: location});
         this.setState({isModalOpen: !this.state.isModalOpen})
     }
 
+    handleUnmount = (e) => {
+        this.setState({isModalOpen: !this.state.isModalOpen})
+    };
+
 
     render() {
-        let modalBody = <Modal unmount={this.handleClick}
+        let modalBody = <Modal unmount={this.handleUnmount}
                                containerClass="-w650">
-            <div className="heroModal">
+            <div className="locationModal">
                 <div className="heroModalDesc">
-                    <h1>loc name</h1>
-                    <h2>loc scale</h2>
-                    <p>loc desc</p>
+                    <h1>{this.state.currentLoc.name}</h1>
+                    <h2>{this.state.currentLoc.role}</h2>
+                    <p>{this.state.currentLoc.desc}</p>
                 </div>
-                <img className="heroModalImg"src={image}>
+                <img className="locModalImg"src={this.state.currentLoc.img}>
 
                 </img>
             </div>
@@ -34,24 +41,11 @@ export default class LocationList extends React.Component {
 
         let locations = this.props.locations.map((location, j) => {
             return(
-                <div className="col-md-3" key={j}>
-                    <div className="card">
-
-                        <div className="card-body ">
+                <LocationListModal location={location} onButtonClick={this.handleClick}/>
+                )});
 
 
-                            <h2>{location.name}</h2>
-                            <h3>{location.desc}</h3>
-                            <h3>{location.size}</h3>
-                            <button onClick={this.handleClick}>Open modal</button>
-                            {this.state.isModalOpen ? modalBody : ''}
 
-
-                        </div>
-                    </div>
-                </div>
-            )
-        });
 
 
         return(
@@ -61,6 +55,7 @@ export default class LocationList extends React.Component {
                     <div className="row">
                         {locations}
                     </div>
+                    {this.state.isModalOpen ? modalBody : ''}
                 </div>
             </>
         );

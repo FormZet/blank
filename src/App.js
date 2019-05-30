@@ -25,78 +25,80 @@ export default class App extends React.Component {
                     name: "Default Universe",
                     desc: "",
                     background: "",
-                    avatar: "",
+                    avatar: "https://image.flaticon.com/icons/svg/116/116859.svg",
                     locationList: [
                         {
                             name: "North",
-                            desc: "TAAAA",
-
+                            desc: "Llega la hora de comprar un celular y varios son los detalles previos que debés tener cuenta para que tu compra termine siendo un " +
+                                "éxito. Prestá atención a las siguientes características de celulares libres que se detallan a continuaciónLlega la hora de comprar un celular y varios son los detalles previos que debés tener cuenta para que tu compra termine siendo un " +
+                                "éxito. Prestá atención a las siguientes características de celulares libres que se detallan a continuación",
+                            size: "lg",
                             img:
-                                "https://c-7npsfqifvt0x24hbnfqfejbx2edvstfdeox2edpn.g00.gamepedia.com/g00/3_c-7epub3.hbnfqfejb.dpn_/c-7NPSFQIFVT0x24iuuqtx3ax2fx2fhbnfqfejb.dvstfdeo.dpnx2fepub3_hbnfqfejbx2fdx2fddx2fBcbeepo_njojnbq_jdpo.qohx3fwfstjpox3dd0d389ed8b052gd18142e664017fg0e8x26j21d.nbslx3djnbhf_$/$/$/$/$"
+                                "https://img.raremaps.com/xlarge/54621.jpg"
                         },
                         {
                             name: "West",
                             desc: "SHAAA",
+                            size: "lg",
                             img:
-                                "https://c-7npsfqifvt0x24hbnfqfejbx2edvstfdeox2edpn.g00.gamepedia.com/g00/3_c-7epub3.hbnfqfejb.dpn_/c-7NPSFQIFVT0x24iuuqtx3ax2fx2fhbnfqfejb.dvstfdeo.dpnx2fepub3_hbnfqfejbx2f2x2f2fx2fBmdifnjtu_njojnbq_jdpo.qohx3fwfstjpox3d9c7g4e8bdcd589f87ed270g2c214430bx26j21d.nbslx3djnbhf_$/$/$/$/$"
+                                "https://vokrugsveta.ua/wp-content/uploads/2018/08/image7.jpg"
                         },
                         {
                             name: "East",
                             desc: "CHIIII",
+                            size: "md",
                             img:
-                                "https://c-7npsfqifvt0x24hbnfqfejbx2edvstfdeox2edpn.g00.gamepedia.com/g00/3_c-7epub3.hbnfqfejb.dpn_/c-7NPSFQIFVT0x24iuuqtx3ax2fx2fhbnfqfejb.dvstfdeo.dpnx2fepub3_hbnfqfejbx2f3x2f36x2fBodjfou_Bqqbsjujpo_njojnbq_jdpo.qohx3fwfstjpox3df4cfdg9deg2614e70c8eg9e45c7ddgf4x26j21d.nbslx3djnbhf_$/$/$/$/$"
+                                "http://1.bp.blogspot.com/-ch3QDbt9nYk/UkEcoEB8_TI/AAAAAAAABS4/pYAT6IdWXqI/s1600/dota2_tutorial_map_1_by_denolus-d6n7w9y.jpg"
                         },
 
                         {
                             name: "South",
                             desc: "DAAAA",
+                            size: "sm",
                             img:
-                                "https://c-7npsfqifvt0x24hbnfqfejbx2edvstfdeox2edpn.g00.gamepedia.com/g00/3_c-7epub3.hbnfqfejb.dpn_/c-7NPSFQIFVT0x24iuuqtx3ax2fx2fhbnfqfejb.dvstfdeo.dpnx2fepub3_hbnfqfejbx2f4x2f41x2fBouj-Nbhf_njojnbq_jdpo.qohx3fwfstjpox3db0237360e86gc9dc8dbc6e079955fd10x26j21d.nbslx3djnbhf_$/$/$/$/$"
+                                "http://way2travel.ru/wp-content/uploads/2012/02/nestandart-3-1.jpg"
                         }
                     ],
                     heroList: [
                         {
                             name: "Abaddon",
                             desc: "TAAAA",
-                            role: "",
+                            role: "II",
                             img:
-                                "https://c-7npsfqifvt0x24hbnfqfejbx2edvstfdeox2edpn.g00.gamepedia.com/g00/3_c-7epub3.hbnfqfejb.dpn_/c-7NPSFQIFVT0x24iuuqtx3ax2fx2fhbnfqfejb.dvstfdeo.dpnx2fepub3_hbnfqfejbx2fdx2fddx2fBcbeepo_njojnbq_jdpo.qohx3fwfstjpox3dd0d389ed8b052gd18142e664017fg0e8x26j21d.nbslx3djnbhf_$/$/$/$/$"
+                                "https://i.pinimg.com/564x/7f/e7/16/7fe71679db253e3678ab4d2c217d1f57.jpg"
                         },
                         {
                             name: "Alchemist",
                             desc: "SHAAA",
-                            role: "",
-                            img:
-                                "https://c-7npsfqifvt0x24hbnfqfejbx2edvstfdeox2edpn.g00.gamepedia.com/g00/3_c-7epub3.hbnfqfejb.dpn_/c-7NPSFQIFVT0x24iuuqtx3ax2fx2fhbnfqfejb.dvstfdeo.dpnx2fepub3_hbnfqfejbx2f2x2f2fx2fBmdifnjtu_njojnbq_jdpo.qohx3fwfstjpox3d9c7g4e8bdcd589f87ed270g2c214430bx26j21d.nbslx3djnbhf_$/$/$/$/$"
+                            role: "I",
+                            img:"https://i.pinimg.com/564x/a5/5c/cb/a55ccbbad48f3241bc881221faa7a0c6.jpg"
                         },
                         {
                             name: "Ancient Apparation",
-                            desc: "CHIIII",
-                            role: "",
+                            desc: "IssddsI",
+                            role: "I",
                             img:
-                                "https://c-7npsfqifvt0x24hbnfqfejbx2edvstfdeox2edpn.g00.gamepedia.com/g00/3_c-7epub3.hbnfqfejb.dpn_/c-7NPSFQIFVT0x24iuuqtx3ax2fx2fhbnfqfejb.dvstfdeo.dpnx2fepub3_hbnfqfejbx2f3x2f36x2fBodjfou_Bqqbsjujpo_njojnbq_jdpo.qohx3fwfstjpox3df4cfdg9deg2614e70c8eg9e45c7ddgf4x26j21d.nbslx3djnbhf_$/$/$/$/$"
+                                "https://i.pinimg.com/564x/a5/6d/04/a56d04e01710425bde307622234d843b.jpg"
                         },
 
                         {
                             name: "Anti-Mage",
                             desc: "DAAAA",
-                            role: "",
-                            img:
-                                "https://c-7npsfqifvt0x24hbnfqfejbx2edvstfdeox2edpn.g00.gamepedia.com/g00/3_c-7epub3.hbnfqfejb.dpn_/c-7NPSFQIFVT0x24iuuqtx3ax2fx2fhbnfqfejb.dvstfdeo.dpnx2fepub3_hbnfqfejbx2f4x2f41x2fBouj-Nbhf_njojnbq_jdpo.qohx3fwfstjpox3db0237360e86gc9dc8dbc6e079955fd10x26j21d.nbslx3djnbhf_$/$/$/$/$"
+                            role: "I",
+                            img:"https://i.pinimg.com/564x/3e/80/ac/3e80ac60a2570053fe3bdab2d8a35ff4.jpg"
                         },
                         {
                             name: "Arc Warden",
                             desc: "DAAAA",
-                            role: "",
-                            img:
-                                "https://c-3sux78kvnkay76x24mgskvkjogx2eiax78ykijtx2eius.g00.gamepedia.com/g00/3_c-3juzg8.mgskvkjog.ius_/c-3SUXKVNKAY76x24nzzvyx3ax2fx2fmgskvkjog.iax78ykijt.iusx2fjuzg8_mgskvkjogx2fkx2fk5x2fGx78i_Cgx78jkt_sotosgv_oiut.vtmx3fbkx78youtx3d8764iijk32iij101353l0183i8l20l15x26o76i.sgx78qx3dosgmk_$/$/$/$/$"
+                            role: "I",
+                            img:"https://i.pinimg.com/564x/17/74/5e/17745e8bd05eaaab7cd99ce33b721d34.jpg"
                         },
                         {
                             name: "Axe",
                             desc: "CHIIII",
-                            role: "",
+                            role: "II",
                             img:
-                                "https://c-7npsfqifvt0x24hbnfqfejbx2edvstfdeox2edpn.g00.gamepedia.com/g00/3_c-7epub3.hbnfqfejb.dpn_/c-7NPSFQIFVT0x24iuuqtx3ax2fx2fhbnfqfejb.dvstfdeo.dpnx2fepub3_hbnfqfejbx2fgx2fg8x2fByf_njojnbq_jdpo.qohx3fwfstjpox3dec0cf4f60f76e7f9e2de594ge4c5497fx26j21d.nbslx3djnbhf_$/$/$/$/$"
+                                "https://i.pinimg.com/564x/94/e6/c1/94e6c1cc3203d07fe3b2b2de77d18a1c.jpg"
                         }
                     ]
                 },

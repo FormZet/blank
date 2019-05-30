@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
-export default class HeroListModal extends React.Component {
+export default class LocationListModal extends React.Component {
     click = () => {
-        this.props.onButtonClick(this.props.hero);
+        this.props.onButtonClick(this.props.location);
     };
 
     render() {
@@ -12,10 +12,10 @@ export default class HeroListModal extends React.Component {
 
                     <div className="card-body ">
 
-                        <img src={this.props.hero.img}/>
+                        <img src={this.props.location.img}/>
 
-                        <h2>{this.props.hero.name}</h2>
-                        <h3>{this.props.hero.role}</h3>
+                        <h2>{this.props.location.name}</h2>
+                        <h3>{this.props.location.size}</h3>
 
                         <div className='btn' onClick={this.click}>Information</div>
                     </div>

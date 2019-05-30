@@ -14,8 +14,8 @@ export default class MyBlank extends React.Component {
 
 
                             <h2><Link to={'/chooseCreation'}>{universe.name}</Link></h2>
-                            <h3>{universe.desc}</h3>
-                            <h3>{universe.size}</h3>
+
+                            {/*<img src={this.state.universeList.avatar}/>*/}
 
 
                         </div>
